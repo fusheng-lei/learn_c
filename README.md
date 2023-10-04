@@ -12,7 +12,7 @@ git pull --rebase origin master
 
 最常用：
 
-// 克隆远程代码下来本地
+<!-- // 克隆远程代码下来本地 -->
 
 -git clone xxxx
 
