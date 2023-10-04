@@ -24,8 +24,8 @@ git mv <source> <destination>
                     git rm readme.md
                     git add readme.txt
  -->
- 
-<!-- 提交，备注 -->
+
+<!-- 提交到本地仓库 -->
 git commit -m '初始化仓库' 
 <!-- 与远程链接 -->
 git remote add origin https://github.com/ziky0827/test.git

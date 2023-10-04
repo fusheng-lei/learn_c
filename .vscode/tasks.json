@@ -10,8 +10,8 @@
                 "${file}",
                 "-o",
                 // "${fileDirname}\\${fileBasenameNoExtension}.exe"
-                "${fileDirname}\\output\\${fileBasenameNoExtension}.exe"
-                // "${fileDirname}\\output\\test.exe"能运行中文名的文件
+                // "${fileDirname}\\output\\${fileBasenameNoExtension}.exe"
+                "${fileDirname}\\output\\test.exe"//所有输出都为test.exe，能运行中文名的文件
 
             ],
             "options": {
