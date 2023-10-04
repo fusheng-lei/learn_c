@@ -34,6 +34,10 @@ git push -u origin master
 <!-- 拉取远程仓库并于本地仓库合并 -->
 git pull --rebase origin master
 
+<!-- 删除远程分支 -->
+git push main --delete firsttest
+<!-- 修剪远程分支，github上删除了vscode还有 -->
+git remote prune origin
 
 最常用：
 <!-- // 克隆远程代码下来本地 -->
