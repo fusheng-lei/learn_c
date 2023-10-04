@@ -1,5 +1,6 @@
 #include <stdio.h>
 //函数原型声明
+//指针就是保存地址的变量
 void f(int *p);
 void g(int k);
 
