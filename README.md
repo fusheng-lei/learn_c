@@ -1,8 +1,31 @@
 git常用命令
-
+<!-- 初始化仓库 -->
 git init
+
+<!-- 向仓库版本控制系统中添加文件，之后对此文件的修改，将被 Git 记录 -->
+git add <filename>
+<!-- git add 允许一次添加多个文件 -->
+git add <filename1>  <filename2> ...
+<!-- git add 可以添加指定目录，目录的添加会自动添加子目录 -->
+git add <directory_name>
+<!-- 允许添加当前目录下的所有文件 -->
 git add .
-<!-- 不知道初始化仓库有什么用 -->
+<!-- 从仓库文件管理系统中移除文件，文件将变为未跟踪状态，之后对此文件的任何修改，Git 将一致忽略,此种方式，不仅将文件状态置为未跟踪，也会从工作目录删除此文件 -->
+git rm <filename>
+<!-- 将文件状态置为未跟踪，本地保留此文件 -->
+git rm --cached <filename>
+<!-- 如果文件已经添加到暂存区，则必须使用强制删除 -f -->
+git rm -f <filename>
+<!-- 可以对目录进行递归删除 -r , 则会删除整个目录下的所有子目录和文件 -->
+git rm -r <directory_name>
+<!-- 文件重命名 -->
+git mv <source> <destination>
+<!--相当于三个命令   mv readme.md readme.txt
+                    git rm readme.md
+                    git add readme.txt
+ -->
+ 
+<!-- 提交，备注 -->
 git commit -m '初始化仓库' 
 <!-- 与远程链接 -->
 git remote add origin https://github.com/ziky0827/test.git
@@ -10,13 +33,6 @@ git remote add origin https://github.com/ziky0827/test.git
 git push -u origin master
 <!-- 拉取远程仓库并于本地仓库合并 -->
 git pull --rebase origin master
-<!-- 将文件状态置为未跟踪，本地保留此文件 -->
-git rm --cached <filename>
-<!-- 如果文件已经添加到暂存区，则必须使用强制删除 -f -->
-git rm -f <filename>
-<!-- 可以对目录进行递归删除 -r , 则会删除整个目录下的所有子目录和文件 -->
-git rm -r <directory_name>
-
 
 
 最常用：
