@@ -30,13 +30,13 @@ git commit -m '初始化仓库'
 <!-- 与远程链接 -->
 git remote add origin https://github.com/ziky0827/test.git
 <!-- 推送 -->
-git push -u origin master
+git push -u origin master/main
 <!-- 拉取远程仓库并于本地仓库合并 -->
-git pull --rebase origin master
+git pull --rebase origin master/main
 
 <!-- 删除远程分支 -->
 git push main --delete firsttest
-<!-- 修剪远程分支，github上删除了vscode还有 -->
+<!-- 修剪远程分支，github上删除了但vscode还有 -->
 git remote prune origin
 
 最常用：
