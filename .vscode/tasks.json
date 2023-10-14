@@ -9,7 +9,7 @@
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}\\output\\test.exe"//输出问价都是test,可以中文命名
+                "${fileDirname}\\output\\test.exe"//输出文件都是test,可以中文命名
             ],
             "options": {
                 "cwd": "D:/MinGW64/bin"

@@ -1,7 +1,10 @@
-git常用命令
+<!-- git常用命令 -->
+<!-- 配置基本用户信息 -->
+git config --global user.name <你的用户名>
+git config --global user.email <你的邮箱地址>
+
 <!-- 初始化仓库 -->
 git init
-
 <!-- 向仓库版本控制系统中添加文件，之后对此文件的修改，将被 Git 记录 -->
 git add <filename>
 <!-- git add 允许一次添加多个文件 -->
@@ -26,7 +29,9 @@ git mv <source> <destination>
  -->
 
 <!-- 提交到本地仓库 -->
-git commit -m '初始化仓库' 
+git commit -m "提交说明"
+<!-- 修改（Amend）上一个提交 -->
+git commit --amend -m＂＜新提交信息＞＂ 
 <!-- 与远程链接 -->
 git remote add origin https://github.com/ziky0827/test.git
 <!-- 推送 -->
@@ -34,31 +39,40 @@ git push -u origin master/main
 <!-- 拉取远程仓库并于本地仓库合并 -->
 git pull --rebase origin master/main
 
-<!-- 删除远程分支 -->
-git push main --delete firsttest
-<!-- 修剪远程分支，github上删除了但vscode还有 -->
-git remote prune origin
-
-最常用：
 <!-- // 克隆远程代码下来本地 -->
--git clone xxxx
-// 修改的代码细节展示
--git diff 
-// 当前分支状态（改动总览）
--git status
+git clone ＜远程仓库的 Url＞
+<!-- 修改的代码细节展示 -->
+git diff 
+
 // 会监控工作区的状态树，使用它会把工作时的所有变化提交到暂存区，
 // 包括文件内容修改(modified)以及新文件(new)，但不包括被删除的文件。(这个说法不正确，实验证明删除文件也是可以提交的)
 // git版本在2.x之后应该是把 . 和 -A作用相同化了 而不是晚上复制的
 -git add .
 -git add -A
-// 提交暂存区文件到本地仓库
--git commit -m "我的修改备注"
-// 提交本地数据到 对应的远程分支
--git push
-// 查看本地对应远程的分支对应关系
--git branch -vv 
-// 查看本地和远程所有分支
--git branch -a 
+
+<!-- 当前分支状态（改动总览） -->
+git status
+<!-- 删除远程分支 -->
+git push main --delete firsttest
+<!-- 修剪远程分支，github上删除了但vscode还有 -->
+git remote prune origin
+<!-- 提交本地数据到 对应的远程分支 -->
+git push
+<!-- // 查看本地对应远程的分支对应关系 -->
+git branch -vv 
+<!-- 查看本地和远程所有分支 -->
+git branch -a 
+<!-- 查看所有分支 -->
+git branch 
+<!-- 创建新分支 -->
+git branch ＜分支名字＞ 
+<!-- 切换分支 -->
+git checkout ＜分支名字＞ 
+<!-- 重命名分支 -->
+git branch -m ＜旧名字＞＜新名字＞ 
+<!-- 删除分支 -->
+git branch -d ＜分支名字＞
+
 // 以当前本地分支作为基础新建一个xxx分支（默认你这个xxx分支 也是push到 当前分支的远程分支）
 -git checkout -b xxx 
 // 提交本地分支代码到 xxx远程分支
@@ -77,13 +91,12 @@ git remote prune origin
 
 
 部分常用
-
 -git branch -d xxx 删除分支（当前分支不能为xxx）
 -git push origin --delete xxx(删除远程分支)
 
-// 文件退出暂存区，但是修改保留：
+<!-- 文件退出暂存区，但是修改保留 -->
 -git reset --mixed
-// 撤销所有的已经 add 的文件：
+<!-- 撤销所有的已经 add 的文件： -->
 -git reset HEAD .
 // 撤销某个文件或文件夹：
 -git reset HEAD  filename
