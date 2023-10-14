@@ -124,5 +124,4 @@ git reset --hard xxxxx回退到某一个历史节点
 如果改动回到较远的一个节点 git push 可能会失败报错，因此我们需要强推到一个版本的话 需要：
 git push -f -u // -u 这里是为了持续推送到指定分支 这里意义不大
 git rebase xxx
-git add .
 git rebase --continue
