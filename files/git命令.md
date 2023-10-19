@@ -1,7 +1,7 @@
 <!-- git常用命令 -->
 <!-- 配置基本用户信息 -->
-git config --global user.name <你的用户名>
-git config --global user.email <你的邮箱地址>
+git config --global user.name <uername>
+git config --global user.email <emailaddress>
 
 <!-- 初始化仓库 -->
 git init
@@ -79,9 +79,9 @@ git branch <branchname>
 <!-- 切换分支 -->
 git checkout <branchname> 
 <!-- 重命名分支 -->
-git branch -m <旧名字><新名字> 
+git branch -m <oldname><newname> 
 <!-- 创建新分支并立即切换到该分支下，从而在该分支中操作 -->
-git checkout -b (branchname)
+git checkout -b <branchname>
 <!-- 将本地分支与远程xxx分支进行关联形成关联关系 -->
 git branch --set-upstream-to=origin/xxx 
 
