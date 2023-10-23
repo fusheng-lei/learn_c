@@ -18,6 +18,7 @@ int main()
 
     int i=5,k;
     k=(+i)+(+i)+(i++);
-    printf("%d,%d\n",k,i);
+    cout<<"k="<<k<<endl;
+    cout<<"i="<<i<<endl; 
     return 0;
 }
