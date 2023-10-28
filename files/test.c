@@ -1,62 +1,31 @@
-// //文件里边就以C语言的规范写
-// //文件内容例：
-// #include<stdio.h>
-// #include<stdlib.h>
-// int main()
-// {
-//     for (int i = 1; i<= 9; i++)
-//     {
-//         for (int j= 1; j<=i;j++)
-//         {
-//             printf("%d*%d=%-3d", i, j, i*j);
-//         }
-//         printf("\n");
-//     }
-//     // system("pause");
-//     // system("read");
-//     return 0;
-// // 
-#include<stdio.h>
+#include<stdio.h> 
 
-void main() 
+int main() 
 {
-    // int k=11;
-    // printf("k=%d,k=%o,k=%x\n",k,k,k);
+    // int x=19; x&=0x1f;
+    // printf("%d，%d\n",x<<1,x>>1); 
 
-    // int x=1,y=1,z=1; 
-    // x+=y+=z;
-    // printf("%d\n",x<y?y:x);
+    // char s[]="hello"; 
+    // char*p=s;
+    // printf("%d\n",sizeof(s)); 
+    // printf("%d\n",sizeof(p));
 
-    // int a[5]={1,2,3,4,5}; 
-    // int b[5];
-    // int*ptr=(int*)(&a+1);
-    // printf("%d,%d\n",*(a+1),*(ptr-1));
-    // // return 0;
 
-    // int x = 0x13;
-    // printf("INT;%d\n",x+1);
+    // int a=10; int b=20; int c;
+    // c=a++ + ++b;
+    // printf("a = %d,b = %d c= %d\n",a,b,c); 
 
-    // int t = 072;
-    // printf("%d\n",t+1);
+    // unsigned char i=1;
+    // printf("%d\n",i-=3); 
 
-    int a;
-    a = (int)((double)(3/2)+0.5);
-    printf("a = %d\n",a);
+    // 18．若有定义：则可以表示字符'h'的表达式是（）
+    char *say[]={"hi","hello","hey"};
+    char **p=say;
+    printf("*say+2=%s\n",*say+3);
+    printf("*say[2]=%c\n",*say[2]);
+    printf("*(say+1)=%s\n",*(say+1));
+    // printf("**++say=%d\n",**++say);
 
-}
-
-// 7．下面代码有什么问题，请指出并进行修改。
-#include<stdio.h>
-int main(){
-    char*src="hello,world";
-    char*dest=NULL;
-    int len=strlen(src);
-    dest=(char*)malloc(len);
-    char*d=dest;
-    char*s=src(len);
-    while(len--!=0)
-        d++ =s--;
-        printf("%s",dest);
-        return 0;
-}
+    return 0;
+} 
 

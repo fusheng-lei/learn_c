@@ -1,18 +1,22 @@
-#include<stdio.h>
-#include<string.h>
-// using namespace std; 
-void Func(char str_arg[100])
+#include <stdio.h>
+// int func(int n)
+// {
+//     if (n == 0|| n == 1) return n;
+//     else
+//     return func(n - 1) + func(n - 2);
+// }
+
+
+void foo(void)
 {
-    printf("%d\n",sizeof(str_arg)); 
+    unsigned int a =6;int b=-20; 
+    (a+b>6)? puts(">6"):puts("<=6"); 
 }
 
-int main(void)
+int main()
 {
-    char str[]="Hello";
-    printf("%d\n",sizeof(str));
-    printf("%d\n",strlen(str));
+    // printf( "%d\n", func(5));
+    foo();
 
-    char*p=str;
-    printf("%d\n",sizeof(p)); 
-    Func(str);
+    return 0;
 }
