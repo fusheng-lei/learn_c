@@ -2,7 +2,7 @@
  * @Author       : ziky
  * @Date         : 2024-06-17 16:00:37
  * @Version      : V1.0.0
- * @LastEditTime : 2024-06-17 16:11:34
+ * @LastEditTime : 2024-06-24 11:58:43
  * @LastEditors  : ziky
  * @FilePath     : \c_prj\c_Introduction_and_Advanced\23_函数.c
  * @Description  : 素数求和
@@ -23,6 +23,23 @@ int isPrime(int i)
     }
     return ret;
 }
+
+// int isPrime(int x)
+// {
+//     int ret = 1;
+//     int i;
+//     if(x == 1 || (x % 2 == 0 && x != 2))
+//         ret = 0;
+//     for(i = 3;i < sqrt(x);i += 2)
+//     {
+//         if(x % i == 0)
+//         {
+//             ret = 0;
+//             break;
+//         }
+//     }
+//     return ret;
+// }
 
 int main(int argc, char *argv[])
 {
