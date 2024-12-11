@@ -1,0 +1,33 @@
+/*  
+** 把新节点添加到链表中。
+*/
+if( next != NULL ){
+    /* 
+    ** 情况1或情况2: 并非位于链表的尾部。
+    */
+          newnode->fwd = next;
+          if( this != rootp ){     /* 情况1: 并非位于链表起始位置。 */
+               this->fwd = newnode;
+               newnode->bwd = this;
+          }
+          else {                         /* 情况2: 位于链表起始位置。 */
+               rootp->fwd = newnode;
+               newnode->bwd = NULL;
+          }
+          next->bwd = newnode;
+}
+else {
+      /* 
+      ** 情况3或情况4: 位于链表尾部。 
+      */
+          newnode->fwd = NULL;
+          if( this != rootp ){  /* 情况3: 并不位于链表起始位置。 */
+               this->fwd = newnode;
+               newnode->bwd = this;
+          }
+          else {                       /* 情况4: 位于链表起始位置。 */
+               rootp->fwd = newnode;
+               newnode->bwd = NULL;
+          }
+          rootp->bwd = newnode;
+          }

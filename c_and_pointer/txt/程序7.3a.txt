@@ -1,0 +1,13 @@
+/*
+** 交换调用程序中的两个整数(没有效果!)
+*/
+
+void
+swap( int x, int y )
+{
+            int temp;
+
+            temp = x;
+            x = y;
+            y = temp;
+}

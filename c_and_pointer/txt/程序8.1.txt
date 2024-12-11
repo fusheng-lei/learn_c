@@ -1,0 +1,12 @@
+/*
+**  把第2个参数中的字符串复制到第1个参数指定的缓冲区。
+*/
+void
+strcpy( char *buffer, char const *string )
+{
+          /*
+          ** 重复复制字符，直到遇见NUL字节。
+          */
+          while( (*buffer++ = *string++) != '\0' )
+                 ;
+}

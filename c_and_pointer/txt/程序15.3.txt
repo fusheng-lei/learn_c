@@ -1,0 +1,15 @@
+/* 
+** 把标准输入读取的文本行逐行复制到标准输出。 
+*/
+#include <stdio.h>
+
+#define   MAX_LINE_LENGTH         1024  /* 可以复制的最长行。 */
+
+void
+copylines( FILE *input, FILE *output )
+{
+            char  buffer[MAX_LINE_LENGTH];
+
+            while( fgets( buffer, MAX_LINE_LENGTH, input ) != NULL )   
+                fputs( buffer, output );
+}

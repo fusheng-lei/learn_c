@@ -1,0 +1,7 @@
+/* 
+** 把新节点添加到链表中。
+*/
+newnode->fwd = next;
+this->fwd = newnode;
+newnode->bwd = this != rootp ? this : NULL;
+( next != NULL ? next : rootp )->bwd = newnode;

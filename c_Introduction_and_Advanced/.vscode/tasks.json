@@ -10,8 +10,8 @@
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}\\..\\output\\${fileBasenameNoExtension}.exe"
-                // "${fileDirname}\\output\\test.exe"//输出文件都是test,可以中文命名
+                //"${fileDirname}\\${fileBasenameNoExtension}.exe"
+                "${fileDirname}\\output\\test.exe"//输出文件都是test,可以中文命名
             ],
             "options": {
                 "cwd": "D:\\MinGW64\\bin"
@@ -35,8 +35,8 @@
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}\\..\\output\\${fileBasenameNoExtension}.exe"
-                // "${fileDirname}\\output\\test.exe"
+                // "${fileDirname}\\${fileBasenameNoExtension}.exe"
+                "${fileDirname}\\output\\test.exe"
             ],
             "options": {
                 // "cwd": "${fileDirname}"
@@ -57,8 +57,8 @@
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}\\..\\output\\${fileBasenameNoExtension}.exe"
-                // "${fileDirname}\\output\\test.exe"
+                // "${fileDirname}\\${fileBasenameNoExtension}.exe"
+                "${fileDirname}\\output\\test.exe"
             ],
             "options": {
                 // "cwd": "${fileDirname}"

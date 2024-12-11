@@ -1,0 +1,35 @@
+# Project: test
+# Makefile created by Dev-C++ 6.7.5
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = main.o write_test.o Queue.o
+LINKOBJ  = main.o write_test.o Queue.o
+LIBS     = -L"d:/dev-cpp/mingw32/lib/gcc/mingw32/9.2.0/" -L"d:/dev-cpp/mingw32/lib/gcc/" -L"d:/dev-cpp/mingw32/mingw32/lib/" -L"d:/dev-cpp/mingw32/lib/" -L"D:/Dev-Cpp/MinGW32/lib" -L"D:/Dev-Cpp/MinGW32/mingw32/lib" -g3 -static
+INCS     = -I"d:/dev-cpp/mingw32/lib/gcc/mingw32/9.2.0/include" -I"d:/dev-cpp/mingw32/include" -I"d:/dev-cpp/mingw32/lib/gcc/mingw32/9.2.0/include-fixed"
+CXXINCS  = -I"d:/dev-cpp/mingw32/lib/gcc/mingw32/9.2.0/include/c++" -I"d:/dev-cpp/mingw32/lib/gcc/mingw32/9.2.0/include/c++/mingw32" -I"d:/dev-cpp/mingw32/lib/gcc/mingw32/9.2.0/include/c++/backward" -I"d:/dev-cpp/mingw32/lib/gcc/mingw32/9.2.0/include" -I"d:/dev-cpp/mingw32/include" -I"d:/dev-cpp/mingw32/lib/gcc/mingw32/9.2.0/include-fixed"
+BIN      = test.exe
+CXXFLAGS = $(CXXINCS) -Wall -Wextra -g3
+ENCODINGS = -finput-charset=utf-8 -fexec-charset=gbk
+CFLAGS   = $(INCS) -Wall -Wextra -g3
+RM       = del /q /f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o "$(BIN)" $(LIBS)
+
+main.o: main.c main.h Queue.h write_test.h
+	$(CC) -c main.c -o main.o $(CFLAGS)  $(ENCODINGS) 
+
+write_test.o: write_test.c
+	$(CC) -c write_test.c -o write_test.o $(CFLAGS) 
+
+Queue.o: Queue.c
+	$(CC) -c Queue.c -o Queue.o $(CFLAGS) 

@@ -1,0 +1,16 @@
+*
+** 用迭代方法计算n的阶乘。
+*/
+
+long
+factorial( int n )
+{
+       int      result = 1;
+
+       while( n > 1 ){
+            result *= n;
+            n -= 1;
+       }
+
+       return result;
+}

@@ -1,0 +1,16 @@
+/* 
+** 一个使用很少引起错误的内存分配器的程序。 
+*/
+#include "alloc.h"
+
+void
+function()
+{
+      Int  *new_memory;
+
+      /*
+      ** 获得一串整型数的空间。
+      */
+      new_memory = MALLOC( 25, int );
+      /* ... */
+}
