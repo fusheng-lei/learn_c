@@ -4,8 +4,8 @@
 CPP      = g++.exe -D__DEBUG__
 CC       = gcc.exe -D__DEBUG__
 WINDRES  = windres.exe
-OBJ      = main.o write_test.o Queue.o
-LINKOBJ  = main.o write_test.o Queue.o
+OBJ      = main.o write_test.o Queue.o device_drv.o
+LINKOBJ  = main.o write_test.o Queue.o device_drv.o
 LIBS     = -L"d:/dev-cpp/mingw32/lib/gcc/mingw32/9.2.0/" -L"d:/dev-cpp/mingw32/lib/gcc/" -L"d:/dev-cpp/mingw32/mingw32/lib/" -L"d:/dev-cpp/mingw32/lib/" -L"D:/Dev-Cpp/MinGW32/lib" -L"D:/Dev-Cpp/MinGW32/mingw32/lib" -g3 -static
 INCS     = -I"d:/dev-cpp/mingw32/lib/gcc/mingw32/9.2.0/include" -I"d:/dev-cpp/mingw32/include" -I"d:/dev-cpp/mingw32/lib/gcc/mingw32/9.2.0/include-fixed"
 CXXINCS  = -I"d:/dev-cpp/mingw32/lib/gcc/mingw32/9.2.0/include/c++" -I"d:/dev-cpp/mingw32/lib/gcc/mingw32/9.2.0/include/c++/mingw32" -I"d:/dev-cpp/mingw32/lib/gcc/mingw32/9.2.0/include/c++/backward" -I"d:/dev-cpp/mingw32/lib/gcc/mingw32/9.2.0/include" -I"d:/dev-cpp/mingw32/include" -I"d:/dev-cpp/mingw32/lib/gcc/mingw32/9.2.0/include-fixed"
@@ -25,11 +25,14 @@ clean: clean-custom
 $(BIN): $(OBJ)
 	$(CC) $(LINKOBJ) -o "$(BIN)" $(LIBS)
 
-main.o: main.c main.h Queue.h write_test.h
+main.o: main.c device_drv.h main.h Queue.h write_test.h
 	$(CC) -c main.c -o main.o $(CFLAGS)  $(ENCODINGS) 
 
 write_test.o: write_test.c
 	$(CC) -c write_test.c -o write_test.o $(CFLAGS) 
 
-Queue.o: Queue.c
+Queue.o: Queue.c Queue.h
 	$(CC) -c Queue.c -o Queue.o $(CFLAGS) 
+
+device_drv.o: device_drv.c device_drv.h
+	$(CC) -c device_drv.c -o device_drv.o $(CFLAGS)  $(ENCODINGS) 

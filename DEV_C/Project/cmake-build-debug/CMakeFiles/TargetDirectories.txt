@@ -1,0 +1,4 @@
+F:/VMshare/c_prj/DEV_C/Project/cmake-build-debug/CMakeFiles/Project.dir
+F:/VMshare/c_prj/DEV_C/Project/cmake-build-debug/CMakeFiles/Pointers_on_c.dir
+F:/VMshare/c_prj/DEV_C/Project/cmake-build-debug/CMakeFiles/edit_cache.dir
+F:/VMshare/c_prj/DEV_C/Project/cmake-build-debug/CMakeFiles/rebuild_cache.dir

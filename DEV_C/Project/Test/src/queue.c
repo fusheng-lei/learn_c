@@ -1,8 +1,18 @@
+/**
+  ******************************************************************************
+  * @file           : queue.c
+  * @author         : Administrator
+  * @brief          : None
+  * @attention      : None
+  * @date           : 2024/12/21
+  ******************************************************************************
+  */
+
 #include <stdio.h>
 #include <stdlib.h>
-#include "Queue.h"
+#include "../inc/queue.h"
 
-// ´´½¨Ò»¸öĞÂµÄ¶ÓÁĞ
+// åˆ›å»ºä¸€ä¸ªæ–°çš„é˜Ÿåˆ—
 Queue* createQueue() {
     Queue* q = (Queue*)malloc(sizeof(Queue));
     if (q == NULL) {
@@ -13,12 +23,12 @@ Queue* createQueue() {
     return q;
 }
 
-// ÅĞ¶Ï¶ÓÁĞÊÇ·ñÎª¿Õ
+// åˆ¤æ–­é˜Ÿåˆ—æ˜¯å¦ä¸ºç©º
 int isEmpty(Queue* q) {
     return q->front == NULL;
 }
 
-// Èë¶Ó²Ù×÷
+// å…¥é˜Ÿæ“ä½œ
 void enqueue(Queue* q, int data) {
     QueueNode* newNode = (QueueNode*)malloc(sizeof(QueueNode));
     if (newNode == NULL) {
@@ -36,7 +46,7 @@ void enqueue(Queue* q, int data) {
     }
 }
 
-// ³ö¶Ó²Ù×÷
+// å‡ºé˜Ÿæ“ä½œ
 int dequeue(Queue* q) {
     if (isEmpty(q)) {
         fprintf(stderr, "Queue is empty\n");
@@ -54,7 +64,7 @@ int dequeue(Queue* q) {
     return data;
 }
 
-// ²é¿´¶ÓÍ·ÔªËØ
+// æŸ¥çœ‹é˜Ÿå¤´å…ƒç´ 
 int front(Queue* q) {
     if (isEmpty(q)) {
         fprintf(stderr, "Queue is empty\n");
@@ -63,7 +73,7 @@ int front(Queue* q) {
     return q->front->data;
 }
 
-// ÊÍ·Å¶ÓÁĞÕ¼ÓÃµÄÄÚ´æ
+// é‡Šæ”¾é˜Ÿåˆ—å ç”¨çš„å†…å­˜
 void freeQueue(Queue* q) {
     while (!isEmpty(q)) {
         dequeue(q);
@@ -73,19 +83,19 @@ void freeQueue(Queue* q) {
 
 void Queue_test(void)
 {
-    Queue* q = createQueue(); // ´´½¨¶ÓÁĞ
+    Queue* q = createQueue(); // åˆ›å»ºé˜Ÿåˆ—
 
-    enqueue(q, 1); // Èë¶Ó
+    enqueue(q, 1); // å…¥é˜Ÿ
     enqueue(q, 2);
     enqueue(q, 3);
 
-    printf("Front element is: %d\n", front(q)); // ²é¿´¶ÓÍ·ÔªËØ
+    printf("Front element is: %d\n", front(q)); // æŸ¥çœ‹é˜Ÿå¤´å…ƒç´ 
 
     while (!isEmpty(q)) {
-        printf("%d ", dequeue(q)); // ³ö¶Ó²¢´òÓ¡ÔªËØ
+        printf("%d ", dequeue(q)); // å‡ºé˜Ÿå¹¶æ‰“å°å…ƒç´ 
     }
     if (isEmpty(q))
         printf("\n");
 
-    freeQueue(q); // ÊÍ·Å¶ÓÁĞÕ¼ÓÃµÄÄÚ´æ
+    freeQueue(q); // é‡Šæ”¾é˜Ÿåˆ—å ç”¨çš„å†…å­˜
 }

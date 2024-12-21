@@ -1,0 +1,6 @@
+# ninja log v6
+96	178	7564914054804445	Project.exe	a880691e64a4a456
+1	72	7564914053855300	CMakeFiles/Project.dir/main.c.obj	793955c7531a51
+6	80	7564914053901655	CMakeFiles/Project.dir/Test/src/queue.c.obj	8aa83bee98eb6a6a
+17	88	7564914054012875	CMakeFiles/Project.dir/Test/src/write_test.c.obj	693ba01434942eca
+35	96	7564914054194240	CMakeFiles/Project.dir/Test/src/device_drv.c.obj	18319580ac241939

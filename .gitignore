@@ -3,4 +3,4 @@
 *.v.out
 *.exe
 ppt/
-c_Introduction_and_Advanced/output/
+*.output/

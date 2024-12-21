@@ -1,16 +1,25 @@
-// ¶¨Òå¶ÓÁÐ½ÚµãµÄ½á¹¹Ìå
+//
+// Created by Administrator on 2024/12/21.
+//
+
+#ifndef TEST_QUEUE_H
+#define TEST_QUEUE_H
+
+#endif //TEST_QUEUE_H
+
+// å®šä¹‰é˜Ÿåˆ—èŠ‚ç‚¹çš„ç»“æž„ä½“
 typedef struct QueueNode {
     int data;
     struct QueueNode* next;
 } QueueNode;
 
-// ¶¨Òå¶ÓÁÐµÄ½á¹¹Ìå
+// å®šä¹‰é˜Ÿåˆ—çš„ç»“æž„ä½“
 typedef struct Queue {
-    QueueNode* front; // ¶ÓÍ·Ö¸Õë
-    QueueNode* rear;  // ¶ÓÎ²Ö¸Õë
+    QueueNode* front; // é˜Ÿå¤´æŒ‡é’ˆ
+    QueueNode* rear;  // é˜Ÿå°¾æŒ‡é’ˆ
 } Queue;
 
-// ´´½¨Ò»¸öÐÂµÄ¶ÓÁÐ
+// åˆ›å»ºä¸€ä¸ªæ–°çš„é˜Ÿåˆ—
 Queue* createQueue() ;
 void freeQueue(Queue* q);
 int front(Queue* q);
@@ -18,3 +27,5 @@ int dequeue(Queue* q);
 void enqueue(Queue* q, int data) ;
 int isEmpty(Queue* q);
 void Queue_test(void) ;
+
+
